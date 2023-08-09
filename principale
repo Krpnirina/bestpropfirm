@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>The BEST PropFirm</title>
+    <style>
+        /* Ajouter des styles CSS pour centrer les éléments de formulaire */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* Ajustez la hauteur en fonction de vos besoins */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="Logo_The_BEST_Prop_Firm.png" alt="Logo The BEST PropFirm">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Stratégies</a></li>
+                <li><a href="#">Performance</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" id="inscription-link">Inscription</a></li>
+                <li><a href="#" id="finance-link">Finance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>The BEST PropFirm</h1>
+        <p>Votre réussite financière commence ici. The Best is coming.</p>
+        <a href="#" class="cta-button" id="commencer-button">Commencer</a>
+    </section>
+
+    <!-- Section d'inscription cachée par défaut -->
+    <section class="inscription" id="inscription-section" style="display: none;">
+        <div class="form-container">
+            <!-- Formulaire d'inscription -->
+        </div>
+    </section>
+
+    <!-- Section de connexion cachée par défaut -->
+    <section class="connexion" id="connexion-section" style="display: none;">
+        <div class="form-container">
+            <!-- Formulaire de connexion -->
+        </div>
+    </section>
+
+    <!-- Section Finance cachée par défaut -->
+    <section class="finance" id="finance-section" style="display: none;">
+        <div class="form-container">
+            <h2>Finance</h2>
+            <p>Faites un dépôt pour investir dans nos stratégies.</p>
+            <a href="lien_vers_page_de_depot" class="cta-button">Faire un dépôt sur Perfect Money</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 The BEST PropFirm. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Gestion de l'affichage des sections
+        document.getElementById("commencer-button").addEventListener("click", function() {
+            document.getElementById("inscription-section").style.display = "block";
+            document.getElementById("connexion-section").style.display = "block";
+            document.getElementById("finance-section").style.display = "none";
+        });
+
+        document.getElementById("finance-link").addEventListener("click", function() {
+            document.getElementById("inscription-section").style.display = "none";
+            document.getElementById("connexion-section").style.display = "none";
+            document.getElementById("finance-section").style.display = "block";
+        });
+    </script>
+</body>
+</html>
